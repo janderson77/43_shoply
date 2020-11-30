@@ -1,4 +1,5 @@
 import {ADD_TO_CART, REMOVE_FROM_CART} from '../actionTypes'
+import {cartTotal} from '../helpers'
 import data from '../data.json'
 
 const INITIAL_STATE = {
@@ -17,7 +18,10 @@ const rootReducer = (state=INITIAL_STATE, action) => {
             return{
                 ...state,
                 cartItems: cartCopy,
-                cartValue: 0
+                cartValue: cartTotal(
+                    state.products,
+                    cartCopy
+                )
             }
         }
         case REMOVE_FROM_CART: {
@@ -30,7 +34,10 @@ const rootReducer = (state=INITIAL_STATE, action) => {
             return{
                 ...state,
                 cartItems: cartCopy,
-                cartValue: 0
+                cartValue: cartTotal(
+                    state.products,
+                    cartCopy
+                )
             }
         }
         default:
