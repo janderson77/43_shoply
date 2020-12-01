@@ -1,20 +1,19 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import CartIcons from './CartIcons'
+import './ProductCard.css'
 
-const ProductCard = ({id, name}) => {
-    console.log(id)
+const ProductCard = ({id, name, img}) => {
     return (
-    <div className="col-md-3 mb-3" key={id}>
       <div className="card">
+        <NavLink to={`/products/${id}`}><img className="card-img-top" alt={name} src={img} /></NavLink>
         <div className="card-body">
           <h2 className="card-title text-center">
-            <Link to={`/products/${id}`}>{name}</Link>
+            <NavLink to={`/products/${id}`}>{name}</NavLink>
           </h2>
           <CartIcons id={id} />
         </div>
       </div>
-    </div>
     )
 }
 

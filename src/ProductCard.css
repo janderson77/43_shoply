@@ -1,0 +1,27 @@
+.card {
+	width: 30%;
+	margin: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card-body {
+	border: 1px solid gray;
+	max-height: 126px;
+	width: 100%;
+}
+.ProductCard {
+	min-width: 500px;
+	max-height: 470px;
+}
+
+.card-img-top {
+	width: 100%;
+	height: 10vw;
+	object-fit: contain;
+}
+
+.CartIcon {
+	margin: 0 1rem 0 1rem;
+}

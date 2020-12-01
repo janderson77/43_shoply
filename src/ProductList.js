@@ -9,9 +9,8 @@ const ProductList = () => {
     const products = useSelector(s => s.products)
     const cartTotal = useSelector(s => s.cartValue)
     const listOfProducts = Object.keys(products).map(id => (
-        <ProductCard key={id} id={id} name={products[id].name} />
+        <ProductCard key={id} id={id} name={products[id].name} img={products[id].image_url} />
     ))
-    console.log(products)
     return(
         <div>
             <h1>Products</h1>
