@@ -1,5 +1,5 @@
 import {ADD_TO_CART, REMOVE_FROM_CART} from '../actionTypes'
-import {cartTotal} from '../helpers'
+import {cartTotal, calculateTotalQuantity} from '../helpers'
 import data from '../data.json'
 
 const INITIAL_STATE = {

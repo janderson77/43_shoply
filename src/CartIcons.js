@@ -8,8 +8,8 @@ const CartIcons = ({id}) => {
     const remove = () => dispatch(removeFromCart(id))
     return(
         <div>
-            <i className="CartIcon fas fa-cart-plus fa-2x text-success" onClick={add} />
-            <i className="CartIcon fas fa-cart-arrow-down fa-2x text-danger" onClick={remove} />
+            <i className="CartIcon far fa-minus-square fa-2x text-danger" onClick={remove} />
+            <i className="CartIcon far fa-plus-square fa-2x text-success" onClick={add} />
         </div>    
     )
 }
